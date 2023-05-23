@@ -1,6 +1,7 @@
 package com.gbotelho.entities;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import jakarta.persistence.Column;
@@ -29,7 +30,7 @@ public class Product {
 	
 	private Double price;
 	
-	private String imgURL;
+	private String imgUrl;
 	
 	@ManyToMany
 	@JoinTable(name = "tb_product_category",
@@ -50,7 +51,7 @@ public class Product {
 		this.name = name;
 		this.description = description;
 		this.price = price;
-		this.imgURL = imgURL;
+		this.imgUrl = imgURL;
 	}
 
 	public Long getId() {
@@ -85,16 +86,24 @@ public class Product {
 		this.price = price;
 	}
 
-	public String getImgURL() {
-		return imgURL;
+	public String getImgUrl() {
+		return imgUrl;
 	}
 
-	public void setImgURL(String imgURL) {
-		this.imgURL = imgURL;
+	public void setImgUrl(String imgUrl) {
+		this.imgUrl = imgUrl;
 	}
 	
 	public Set<Category> getCategories() {
 		return categories;
+	}
+	
+	public Set<OrderItem> getItens() {
+		return itens;
+	}
+	
+	public List<Order> getOrders() {
+		return itens.stream().map(x -> x.getOrder()).toList();
 	}
 
 }
