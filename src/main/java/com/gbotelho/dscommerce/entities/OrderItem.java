@@ -1,4 +1,4 @@
-package com.gbotelho.entities;
+package com.gbotelho.dscommerce.entities;
 
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;

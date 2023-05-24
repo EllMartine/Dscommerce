@@ -1,4 +1,4 @@
-package com.gbotelho.entities;
+package com.gbotelho.dscommerce.entities;
 
 import java.util.HashSet;
 import java.util.List;

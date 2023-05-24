@@ -1,4 +1,4 @@
-package com.gbotelho.entities;
+package com.gbotelho.dscommerce.entities;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -31,7 +31,7 @@ public class User {
 	
 	private String password;
 	
-	@OneToMany(mappedBy = "client", targetEntity = Order.class)
+	@OneToMany(mappedBy = "client")
 	private List<Order> orders = new ArrayList<>();
 	
 	public User() {

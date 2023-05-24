@@ -1,4 +1,4 @@
-package com.gbotelho.entities;
+package com.gbotelho.dscommerce.entities;
 
 public enum OrderStatus {
 	
