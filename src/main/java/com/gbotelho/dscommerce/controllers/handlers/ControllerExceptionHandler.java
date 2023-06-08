@@ -2,20 +2,19 @@ package com.gbotelho.dscommerce.controllers.handlers;
 
 import java.time.Instant;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.method.annotation.MethodArgumentConversionNotSupportedException;
 
 import com.gbotelho.dscommerce.dto.CustomError;
 import com.gbotelho.dscommerce.dto.ValidationError;
 import com.gbotelho.dscommerce.service.exceptions.DatabaseException;
 import com.gbotelho.dscommerce.service.exceptions.ResourceNotFoundException;
-
-import jakarta.servlet.http.HttpServletRequest;
 
 @ControllerAdvice
 public class ControllerExceptionHandler {
